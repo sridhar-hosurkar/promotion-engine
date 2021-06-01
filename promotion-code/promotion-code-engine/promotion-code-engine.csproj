@@ -5,4 +5,8 @@
     <RootNamespace>promotion_code_engine</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\promotion-code-models\promotion-code-models.csproj" />
+  </ItemGroup>
+
 </Project>
