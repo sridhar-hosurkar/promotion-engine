@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace promotion_code_models
+namespace PromotionCodeModels
 {
     public class Cart
     {
-        List<Item> Item { get; set; }
+        public List<Item> Item { get; set; }
     }
 
     

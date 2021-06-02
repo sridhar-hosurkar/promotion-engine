@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace promotion_code_models
+namespace PromotionCodeModels
 {
     public class Promotion
     {
-        Item Item { get; set; }
-        double Price { get; set; }
+        public string PromotionCode { get; set; }
+        public List<Item> Item { get; set; }
+        public double Price { get; set; }
     }
 }

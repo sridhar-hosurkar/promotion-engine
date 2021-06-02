@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace promotion_code_models
+﻿namespace PromotionCodeModels
 {
     public class Product
     {

@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "promotion-code-models/1.0.0": {
+      "PromotionCodeModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/promotion-code-models.dll": {}
+          "bin/placeholder/PromotionCodeModels.dll": {}
         },
         "runtime": {
-          "bin/placeholder/promotion-code-models.dll": {}
+          "bin/placeholder/PromotionCodeModels.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "promotion-code-models/1.0.0": {
+    "PromotionCodeModels/1.0.0": {
       "type": "project",
-      "path": "../promotion-code-models/promotion-code-models.csproj",
-      "msbuildProject": "../promotion-code-models/promotion-code-models.csproj"
+      "path": "../promotion-code-models/PromotionCodeModels.csproj",
+      "msbuildProject": "../promotion-code-models/PromotionCodeModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "promotion-code-models >= 1.0.0"
+      "PromotionCodeModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-engine\\promotion-code-engine.csproj",
-      "projectName": "promotion-code-engine",
-      "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-engine\\promotion-code-engine.csproj",
+      "projectUniqueName": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-engine\\PromotionCodeEngine.csproj",
+      "projectName": "PromotionCodeEngine",
+      "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-engine\\PromotionCodeEngine.csproj",
       "packagesPath": "C:\\Users\\Mahati\\.nuget\\packages\\",
       "outputPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-engine\\obj\\",
       "projectStyle": "PackageReference",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\promotion-code-models.csproj": {
-              "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\promotion-code-models.csproj"
+            "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\PromotionCodeModels.csproj": {
+              "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\PromotionCodeModels.csproj"
             }
           }
         }

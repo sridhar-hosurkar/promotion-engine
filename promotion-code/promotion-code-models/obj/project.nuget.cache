@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oPnMfRLFW7syAXCgUyk2qrnevwV0NuNdW/q1SNWDzvVEoo2FFkraqOR8i7d2Y8t/kahsFU3RN5MIo6zsucODXg==",
+  "dgSpecHash": "aDwS6VgIp0k+JTQ1rmj6rWppnJUolytrL8Rz2cLeqicOwluBU3kUx+hqLvUlcPAMGSZUDoh2/i7bNZfR59mf2w==",
   "success": true,
-  "projectFilePath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\promotion-code-models.csproj",
+  "projectFilePath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\PromotionCodeModels.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

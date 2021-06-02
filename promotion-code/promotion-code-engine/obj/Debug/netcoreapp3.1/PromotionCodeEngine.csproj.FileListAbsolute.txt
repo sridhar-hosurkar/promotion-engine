@@ -1,0 +1,12 @@
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.csproj.AssemblyReference.cache
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.AssemblyInfoInputs.cache
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.AssemblyInfo.cs
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.csproj.CoreCompileInputs.cache
+C:\src\promotion-engine\promotion-code\promotion-code-engine\bin\Debug\netcoreapp3.1\PromotionCodeEngine.deps.json
+C:\src\promotion-engine\promotion-code\promotion-code-engine\bin\Debug\netcoreapp3.1\PromotionCodeEngine.dll
+C:\src\promotion-engine\promotion-code\promotion-code-engine\bin\Debug\netcoreapp3.1\PromotionCodeEngine.pdb
+C:\src\promotion-engine\promotion-code\promotion-code-engine\bin\Debug\netcoreapp3.1\PromotionCodeModels.dll
+C:\src\promotion-engine\promotion-code\promotion-code-engine\bin\Debug\netcoreapp3.1\PromotionCodeModels.pdb
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.csproj.CopyComplete
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.dll
+C:\src\promotion-engine\promotion-code\promotion-code-engine\obj\Debug\netcoreapp3.1\PromotionCodeEngine.pdb

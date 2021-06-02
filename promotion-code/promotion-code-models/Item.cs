@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace promotion_code_models
+﻿namespace PromotionCodeModels
 {
     public class Item
     {
-        string SKUId { get; set; }
-        int Quantity { get; set; }
+        public string SKUId { get; set; }
+        public int Quantity { get; set; }
     }
 }

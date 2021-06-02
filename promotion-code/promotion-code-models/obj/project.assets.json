@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\promotion-code-models.csproj",
-      "projectName": "promotion-code-models",
-      "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\promotion-code-models.csproj",
+      "projectUniqueName": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\PromotionCodeModels.csproj",
+      "projectName": "PromotionCodeModels",
+      "projectPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\PromotionCodeModels.csproj",
       "packagesPath": "C:\\Users\\Mahati\\.nuget\\packages\\",
       "outputPath": "C:\\src\\promotion-engine\\promotion-code\\promotion-code-models\\obj\\",
       "projectStyle": "PackageReference",

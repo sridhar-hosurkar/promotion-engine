@@ -1,23 +1,40 @@
-﻿using Xunit;
-using promotion_code_engine;
-using System;
+﻿using AutoFixture;
+using PromotionCodeEngine;
+using PromotionCodeModels;
 using System.Collections.Generic;
-using System.Text;
+using Xunit;
 
-namespace promotion_code_engine.Tests
+namespace PromotionCodeEngine.Tests
 {
     public class RuleTests
     {
+        IRule rule;
+        List<Promotion> Promotions { get; set; }
+
+
+        public RuleTests()
+        {
+            rule = new Rule();
+        }
+
         [Fact()]
         public void IsApplicableTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            rule.IsApplicable(new Cart());
         }
 
         [Fact()]
         public void CalculateDiscountTest()
         {
             Assert.True(false, "This test needs an implementation");
+        }
+
+        [Fact()]
+        public void LoadPromotionsTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            Assert.Equal(3, Rule.GetPromotions().Count);
+
         }
     }
 }

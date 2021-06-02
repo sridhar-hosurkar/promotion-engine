@@ -1,6 +1,6 @@
-﻿using promotion_code_models;
+﻿using PromotionCodeModels;
 
-namespace promotion_code_engine
+namespace PromotionCodeEngine
 {
     public interface IRule
     {

@@ -1,16 +1,21 @@
-﻿using promotion_code_models;
+﻿using PromotionCodeModels;
 using System;
 using System.Collections.Generic;
 
-namespace promotion_code_engine
+namespace PromotionCodeEngine
 {
     public class Rule : IRule
     {
-        List<Promotion> Promotions;
+        public static List<Promotion> Promotions;
 
-        public Rule(List<Promotion> promotions)
+        public static void LoadPromotions(List<Promotion> promotions)
         {
             Promotions = promotions;
+        }
+
+        public static List<Promotion> GetPromotions()
+        {
+            return Promotions;
         }
 
         public double CalculateDiscount(Cart cart)
