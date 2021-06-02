@@ -1,6 +1,7 @@
 ﻿using PromotionCodeModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PromotionCodeEngine
 {
@@ -25,7 +26,9 @@ namespace PromotionCodeEngine
 
         public bool IsApplicable(Cart cart)
         {
-            throw new NotImplementedException();
+            return Promotions.Select(x => x.Items).Any(promotion =>
+                                                cart.Items.Any(cartItem => 
+                                                    promotion.All(x => x.Quantity <= cartItem.Quantity && cartItem.SKUId == x.SKUId)));
         }
     }
 }

@@ -21,7 +21,7 @@ namespace PromotionCodeEngine.Tests
         public void IsApplicablePositiveScenerioATest()
         {
             Rule.LoadPromotions(Data.GetSimplePromotions());
-            var isApplicable = rule.IsApplicable(Data.GetCartScenerioA());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableA());
             Assert.True(isApplicable);
         }
 
@@ -29,7 +29,7 @@ namespace PromotionCodeEngine.Tests
         public void IsApplicablePositiveScenerioBTest()
         {
             Rule.LoadPromotions(Data.GetSimplePromotions());
-            var isApplicable = rule.IsApplicable(Data.GetCartScenerioB());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableB());
             Assert.True(isApplicable);
         }
 
@@ -37,17 +37,32 @@ namespace PromotionCodeEngine.Tests
         public void IsApplicablePositiveScenerioCTest()
         {
             Rule.LoadPromotions(Data.GetSimplePromotions());
-            var isApplicable = rule.IsApplicable(Data.GetCartScenerioC());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableC());
             Assert.True(isApplicable);
         }
 
         [Fact()]
-        public void IsApplicableNegativeTest()
+        public void IsApplicableNegativeATest()
         {
             Rule.LoadPromotions(Data.GetSimplePromotions());
-            var isApplicable = rule.IsApplicable(Data.GetCartScenerioNegative());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableA());
             Assert.False(isApplicable);
+        }
 
+        [Fact()]
+        public void IsApplicableNegativeBTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableB());
+            Assert.False(isApplicable);
+        }
+
+        [Fact()]
+        public void IsApplicableNegativeCTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableC());
+            Assert.False(isApplicable);
         }
 
         [Fact()]

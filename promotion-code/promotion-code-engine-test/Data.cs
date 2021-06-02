@@ -11,12 +11,12 @@ namespace PromotionCodeEngine.Tests
         public static List<Promotion> GetSimplePromotions()
         {
             var promotions = new List<Promotion>();
-            promotions.Add(new Promotion { PromotionCode = "P1", Item = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
-            promotions.Add(new Promotion { PromotionCode = "P2", Item = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
+            promotions.Add(new Promotion { PromotionCode = "P1", Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
+            promotions.Add(new Promotion { PromotionCode = "P2", Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
             promotions.Add(new Promotion
             {
                 PromotionCode = "P3",
-                Item = new List<Item>() {
+                Items = new List<Item>() {
                     new Item { Quantity = 1, SKUId = "C" },
                     new Item { Quantity = 1, SKUId = "D" }
                 }
@@ -27,11 +27,12 @@ namespace PromotionCodeEngine.Tests
         public static List<Promotion> GetComplexPromotions()
         {
             var promotions = new List<Promotion>();
-            promotions.Add(new Promotion { Item = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
-            promotions.Add(new Promotion { Item = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
+            promotions.Add(new Promotion { PromotionCode = "P1", Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
+            promotions.Add(new Promotion { PromotionCode = "P2", Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
             promotions.Add(new Promotion
             {
-                Item = new List<Item>() {
+                PromotionCode = "P3",
+                Items = new List<Item>() {
                     new Item { Quantity = 1, SKUId = "C" },
                     new Item { Quantity = 1, SKUId = "D" }
                 }
@@ -49,17 +50,18 @@ namespace PromotionCodeEngine.Tests
             return products;
         }
 
-        public static Cart GetCartScenerioA()
+        public static Cart GetCartScenerioApplicableA()
         {
             var cart = new Cart();
             cart.Items = new List<Item>();
-            cart.Items.Add(new Item { Quantity = 1, SKUId = "A" });
-            cart.Items.Add(new Item { Quantity = 1, SKUId = "B" });
+            cart.Items.Add(new Item { Quantity = 3, SKUId = "A" });
+            cart.Items.Add(new Item { Quantity = 2, SKUId = "B" });
             cart.Items.Add(new Item { Quantity = 1, SKUId = "C" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "D" });
             return cart;
         }
 
-        public static Cart GetCartScenerioB()
+        public static Cart GetCartScenerioApplicableB()
         {
             var cart = new Cart();
             cart.Items = new List<Item>();
@@ -69,7 +71,7 @@ namespace PromotionCodeEngine.Tests
             return cart;
         }
 
-        public static Cart GetCartScenerioC()
+        public static Cart GetCartScenerioApplicableC()
         {
             var cart = new Cart();
             cart.Items = new List<Item>();
@@ -80,12 +82,31 @@ namespace PromotionCodeEngine.Tests
             return cart;
         }
 
-        public static Cart GetCartScenerioNegative()
+        public static Cart GetCartScenerioNotApplicableA()
         {
             var cart = new Cart();
             cart.Items = new List<Item>();
             cart.Items.Add(new Item { Quantity = 2, SKUId = "A" });
             cart.Items.Add(new Item { Quantity = 1, SKUId = "B" });
+            return cart;
+        }
+
+        public static Cart GetCartScenerioNotApplicableB()
+        {
+            var cart = new Cart();
+            cart.Items = new List<Item>();
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "A" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "B" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "C" });
+            return cart;
+        }
+
+        public static Cart GetCartScenerioNotApplicableC()
+        {
+            var cart = new Cart();
+            cart.Items = new List<Item>();
+            cart.Items.Add(new Item { Quantity = 2, SKUId = "A" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "D" });
             return cart;
         }
     }
