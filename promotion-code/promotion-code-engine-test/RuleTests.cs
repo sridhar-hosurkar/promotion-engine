@@ -18,9 +18,36 @@ namespace PromotionCodeEngine.Tests
         }
 
         [Fact()]
-        public void IsApplicableTest()
+        public void IsApplicablePositiveScenerioATest()
         {
-            rule.IsApplicable(new Cart());
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioA());
+            Assert.True(isApplicable);
+        }
+
+        [Fact()]
+        public void IsApplicablePositiveScenerioBTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioB());
+            Assert.True(isApplicable);
+        }
+
+        [Fact()]
+        public void IsApplicablePositiveScenerioCTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioC());
+            Assert.True(isApplicable);
+        }
+
+        [Fact()]
+        public void IsApplicableNegativeTest()
+        {
+            Rule.LoadPromotions(Data.GetSimplePromotions());
+            var isApplicable = rule.IsApplicable(Data.GetCartScenerioNegative());
+            Assert.False(isApplicable);
+
         }
 
         [Fact()]

@@ -4,7 +4,7 @@ namespace PromotionCodeModels
 {
     public class Cart
     {
-        public List<Item> Item { get; set; }
+        public List<Item> Items { get; set; }
     }
 
     
