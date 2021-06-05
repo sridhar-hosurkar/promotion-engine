@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace PromotionCodeEngine
 {
+
+    /// <summary>
+    /// Load Promotions from database
+    /// It can be made as singleton
+    /// </summary>
     public class PromotionHandler
     {
         public static List<Promotion> Promotions;
