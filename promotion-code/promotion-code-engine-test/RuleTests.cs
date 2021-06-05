@@ -20,7 +20,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicablePositiveScenerioATest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableA());
             Assert.True(isApplicable);
         }
@@ -28,7 +28,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicablePositiveScenerioBTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableB());
             Assert.True(isApplicable);
         }
@@ -36,7 +36,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicablePositiveScenerioCTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioApplicableC());
             Assert.True(isApplicable);
         }
@@ -44,7 +44,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicableNegativeATest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableA());
             Assert.False(isApplicable);
         }
@@ -52,7 +52,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicableNegativeBTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableB());
             Assert.False(isApplicable);
         }
@@ -60,7 +60,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void IsApplicableNegativeCTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             var isApplicable = rule.IsApplicable(Data.GetCartScenerioNotApplicableC());
             Assert.False(isApplicable);
         }
@@ -68,15 +68,15 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void LoadPromotionsTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
-            Assert.Equal(3, Rule.GetPromotions().Count);
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
+            Assert.Equal(3, PromotionHandler.GetPromotions().Count);
 
         }
 
         [Fact()]
         public void CalculateDiscountPositiveScenerioATest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioApplicableA());
             Assert.Equal(205.0,CalculateDiscount);
@@ -85,7 +85,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountPositiveScenerioBTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioApplicableB());
             Assert.Equal(370.0,CalculateDiscount);
@@ -94,7 +94,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountPositiveScenerioCTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioApplicableC());
             Assert.Equal(280.0,CalculateDiscount);
@@ -103,7 +103,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountNegativeATest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioNotApplicableA());
             Assert.Equal(130.0,CalculateDiscount);
@@ -112,7 +112,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountNegativeBTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioNotApplicableB());
             Assert.Equal(100.0,CalculateDiscount);
@@ -121,7 +121,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountNegativeCTest()
         {
-            Rule.LoadPromotions(Data.GetSimplePromotions());
+            PromotionHandler.LoadPromotions(Data.GetSimplePromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioNotApplicableC());
             Assert.Equal(115.0,CalculateDiscount);
@@ -131,7 +131,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountPositiveComplexScenerioATest()
         {
-            Rule.LoadPromotions(Data.GetComplexPromotions());
+            PromotionHandler.LoadPromotions(Data.GetComplexPromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioApplicableA());
             Assert.Equal(205.0, CalculateDiscount);
@@ -140,7 +140,7 @@ namespace PromotionCodeEngine.Tests
         [Fact()]
         public void CalculateDiscountPositiveComplexScenerioBTest()
         {
-            Rule.LoadPromotions(Data.GetComplexPromotions());
+            PromotionHandler.LoadPromotions(Data.GetComplexPromotions());
             Rule.LoadProducts(Data.GetProducts());
             var CalculateDiscount = rule.CalculateDiscount(Data.GetCartScenerioComplexApplicableA());
             Assert.Equal(240.0, CalculateDiscount);
