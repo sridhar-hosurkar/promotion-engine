@@ -11,11 +11,12 @@ namespace PromotionCodeEngine.Tests
         public static List<Promotion> GetSimplePromotions()
         {
             var promotions = new List<Promotion>();
-            promotions.Add(new Promotion { PromotionCode = "P1", Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
-            promotions.Add(new Promotion { PromotionCode = "P2", Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
+            promotions.Add(new Promotion { PromotionCode = "P1", Price = 130, Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
+            promotions.Add(new Promotion { PromotionCode = "P2", Price = 45, Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
             promotions.Add(new Promotion
             {
                 PromotionCode = "P3",
+                Price = 30,
                 Items = new List<Item>() {
                     new Item { Quantity = 1, SKUId = "C" },
                     new Item { Quantity = 1, SKUId = "D" }
@@ -27,12 +28,26 @@ namespace PromotionCodeEngine.Tests
         public static List<Promotion> GetComplexPromotions()
         {
             var promotions = new List<Promotion>();
-            promotions.Add(new Promotion { PromotionCode = "P1", Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
-            promotions.Add(new Promotion { PromotionCode = "P2", Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
+            promotions.Add(new Promotion { PromotionCode = "P1", Price = 130, Priority = 2, Items = new List<Item>() { new Item { Quantity = 3, SKUId = "A" } } });
+            promotions.Add(new Promotion { PromotionCode = "P2", Price = 45, Priority = 2, Items = new List<Item>() { new Item { Quantity = 2, SKUId = "B" } } });
             promotions.Add(new Promotion
             {
                 PromotionCode = "P3",
+                Price = 30,
+                Priority = 2,
                 Items = new List<Item>() {
+                    new Item { Quantity = 1, SKUId = "C" },
+                    new Item { Quantity = 1, SKUId = "D" }
+                }
+            });
+            promotions.Add(new Promotion
+            {
+                PromotionCode = "P4",
+                Price = 80,
+                Priority = 1,
+                Items = new List<Item>() {
+                    new Item { Quantity = 1, SKUId = "A" },
+                    new Item { Quantity = 1, SKUId = "B" },
                     new Item { Quantity = 1, SKUId = "C" },
                     new Item { Quantity = 1, SKUId = "D" }
                 }
@@ -55,6 +70,17 @@ namespace PromotionCodeEngine.Tests
             var cart = new Cart();
             cart.Items = new List<Item>();
             cart.Items.Add(new Item { Quantity = 3, SKUId = "A" });
+            cart.Items.Add(new Item { Quantity = 2, SKUId = "B" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "C" });
+            cart.Items.Add(new Item { Quantity = 1, SKUId = "D" });
+            return cart;
+        }
+
+        public static Cart GetCartScenerioComplexApplicableA()
+        {
+            var cart = new Cart();
+            cart.Items = new List<Item>();
+            cart.Items.Add(new Item { Quantity = 4, SKUId = "A" });
             cart.Items.Add(new Item { Quantity = 2, SKUId = "B" });
             cart.Items.Add(new Item { Quantity = 1, SKUId = "C" });
             cart.Items.Add(new Item { Quantity = 1, SKUId = "D" });
